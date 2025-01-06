@@ -38,7 +38,7 @@ test:
 about:
   home: https://github.com/zeux/volk
   summary: volk is a meta-loader for Vulkan.
-  description: |2
+  description: |
 
     It allows you to dynamically load entrypoints required to use Vulkan
     without linking to vulkan-1.dll or statically linking Vulkan loader.
