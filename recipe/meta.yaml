@@ -57,4 +57,5 @@ about:
 extra:
   recipe-maintainers:
     - hmaarrfk
+    # eunos is interested in aarch64 and pcc64le
     - eunos-1128
