@@ -1,4 +1,4 @@
-{% set version = "1.4.304" %}
+{% set version = "1.4.350" %}
 
 package:
   # There is already a conda-forge packaged named volk
@@ -9,10 +9,10 @@ package:
 
 source:
   url: https://github.com/zeux/volk/archive/refs/tags/{{ version }}.tar.gz
-  sha256: ab3d4a8ccaeb32652259cdd008399504a41792675b0421d90b67729ee274746f
+  sha256: e47c6efe5294bb03729a976b385864bba5daf46ec60f0bdea11e1d1446345f9a
 
 build:
-  number: 1
+  number: 0
   # This is designed to be a header only / statically linked library
   # run_exports:
   #   - {{ pin_subpackage('vulkan-volk', max_pin='x.x.x') }}
@@ -38,7 +38,7 @@ test:
 about:
   home: https://github.com/zeux/volk
   summary: volk is a meta-loader for Vulkan.
-  description: |
+  description: |2
 
     It allows you to dynamically load entrypoints required to use Vulkan
     without linking to vulkan-1.dll or statically linking Vulkan loader.
