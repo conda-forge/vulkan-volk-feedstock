@@ -7,25 +7,26 @@ Home: https://github.com/zeux/volk
 
 Package license: MIT
 
-Summary: volk is a meta-loader for Vulkan.
+Summary: Meta-loader for Vulkan
 
+Development: https://github.com/zeux/volk
 
-It allows you to dynamically load entrypoints required to use Vulkan
-without linking to vulkan-1.dll or statically linking Vulkan loader.
-Additionally, volk simplifies the use of Vulkan extensions by automatically
-loading all associated entrypoints. Finally, volk enables loading Vulkan
-entrypoints directly from the driver which can increase performance by
-skipping loader dispatch overhead.
-
-volk is written in C89 and supports Windows, Linux, Android and macOS (via
-MoltenVK).
-
+volk allows applications to dynamically load Vulkan entrypoints without
+linking to the Vulkan loader. It also simplifies loading extension
+entrypoints and can load entrypoints directly from a driver.
 
 Current build status
 ====================
 
 
-<table>
+<table><tr>
+    <td>GitHub Actions</td>
+    <td>
+      <a href="https://github.com/conda-forge/vulkan-volk-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/vulkan-volk-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      </a>
+    </td>
+  </tr>
     
   <tr>
     <td>Azure</td>
@@ -39,27 +40,6 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=23346&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/vulkan-volk-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_aarch64</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=23346&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/vulkan-volk-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>linux_ppc64le</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=23346&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/vulkan-volk-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
               <td>osx_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=23346&branchName=main">

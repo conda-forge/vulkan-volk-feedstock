@@ -1,0 +1,55 @@
+schema_version: 1
+
+context:
+  version: "1.4.357.0"
+
+package:
+  # The name "volk" is already used by another conda-forge package.
+  name: vulkan-volk
+  version: ${{ version }}
+
+source:
+  url: https://github.com/zeux/volk/archive/refs/tags/vulkan-sdk-${{ version }}.tar.gz
+  sha256: 6400c7b23e24d17e4f04bac49b55b06c4e87677d33398e90344743ec73560ca6
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - ${{ compiler("c") }}
+    - ${{ stdlib("c") }}
+    - cmake
+    - if: win
+      then: ninja
+    - if: unix
+      then: make
+  host:
+    - libvulkan-headers
+    - libvulkan-loader
+
+tests:
+  - package_contents:
+      include:
+        - volk.h
+        - volk.c
+      files:
+        - if: win
+          then: Library/lib/volk.lib
+          else: lib/libvolk.a
+
+about:
+  homepage: https://github.com/zeux/volk
+  repository: https://github.com/zeux/volk
+  summary: Meta-loader for Vulkan
+  description: |
+    volk allows applications to dynamically load Vulkan entrypoints without
+    linking to the Vulkan loader. It also simplifies loading extension
+    entrypoints and can load entrypoints directly from a driver.
+  license: MIT
+  license_file: LICENSE.md
+
+extra:
+  recipe-maintainers:
+    - hmaarrfk
+    - eunos-1128
