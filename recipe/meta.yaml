@@ -1,4 +1,4 @@
-{% set version = "1.4.350" %}
+{% set version = "1.4.357.0" %}
 
 package:
   # There is already a conda-forge packaged named volk
@@ -8,8 +8,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/zeux/volk/archive/refs/tags/{{ version }}.tar.gz
-  sha256: e47c6efe5294bb03729a976b385864bba5daf46ec60f0bdea11e1d1446345f9a
+  url: https://github.com/zeux/volk/archive/refs/tags/vulkan-sdk-{{ version }}.tar.gz
+  sha256: 6400c7b23e24d17e4f04bac49b55b06c4e87677d33398e90344743ec73560ca6
 
 build:
   number: 0
