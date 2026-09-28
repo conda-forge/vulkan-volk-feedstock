@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "1.4.357.0"
+  version: "1.4.363.0"
 
 package:
   # The name "volk" is already used by another conda-forge package.
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/zeux/volk/archive/refs/tags/vulkan-sdk-${{ version }}.tar.gz
-  sha256: 6400c7b23e24d17e4f04bac49b55b06c4e87677d33398e90344743ec73560ca6
+  sha256: 1547d8d74395d4048fb3f4a6313da56db626e89b55db238d0d7e8944c8a645f3
 
 build:
   number: 0
